@@ -1,0 +1,245 @@
+// pages
+
+@import "variables";
+
+#pd-h {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 8px 0;
+  text-align: center;
+  background: $theme_color_1;
+
+  h1 {
+    font: 700 28px $font_1;
+    color: #fff;
+  }
+}
+
+#pd-add-bt {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 10px;
+
+  a {
+    float: right;
+    width: auto;
+    padding: 6px 10px;
+    font: 700 15px $font_1;
+    color: #fff;
+    background: #808080;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $theme_color_1;
+    }
+
+    span:before {
+      content: '\ea13';
+      position: relative;
+      top: 2px;
+      right: 2px;
+      font-family: $icon_1;
+    }
+  }
+}
+
+#add-details {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+
+  &:target {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  #target-inner {
+    position: absolute;
+    display: block;
+    padding: 30px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    background: #fff;
+  }
+
+  a.close {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #34495E;
+    opacity: 0.5;
+    transition: opacity 200ms;
+
+    &:hover {
+      opacity: 0.4
+    }
+  }
+}
+
+#pd-form {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  h2{
+    margin: 0 0 15px;
+    font: 700 18px $font_1;
+    color: #555;
+  }
+
+  input {
+    width: 418px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 20px;
+    padding: 10px;
+    display: block;
+
+    &:hover {
+      border: 1px solid #aaa;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #808080;
+    }
+  }
+
+  input[type="submit"]{
+    width: 200px;
+    margin:0 auto;
+    padding: 6px 10px;
+    font: 700 15px $font_1;
+    color: #fff;
+    background: #808080;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    border-radius: 2px;
+    cursor:pointer;
+
+    &:hover {
+      background-color: $theme_color_1;
+    }
+  }
+}
+
+#pd-edit {
+  position: relative;
+  
+  padding: 30px;margin:0 auto;
+  width: 500px;background:#e9ecef;
+  border:1px solid rgba(128, 128, 128, 0.2);
+
+  h2{
+    margin: 0 0 15px;
+    font: 700 18px $font_1;
+    color: #555;
+  }
+
+  input {
+    width: 418px;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 20px;
+    padding: 10px;
+    display: block;
+
+    &:hover {
+      border: 1px solid #aaa;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid #808080;
+    }
+  }
+
+  input[type="submit"]{
+    width: 200px;
+    margin:0 auto;
+    padding: 6px 10px;
+    font: 700 15px $font_1;
+    color: #fff;
+    background: #808080;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    border-radius: 2px;
+    cursor:pointer;
+
+    &:hover {
+      background-color: $theme_color_1;
+    }
+  }
+
+  a{
+    position:relative;
+    top: 10px;
+    font: 400 15px $font_1;
+    color:#555;
+
+    &:before{
+      content: "\ea60";
+      position: relative;
+      top: 2px;
+      right: 2px;
+      font-family: $icon_1;
+    }
+  }
+}
+
+#pd-table {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  table {
+    border-collapse: collapse;
+    font-size: 18px;
+    z-index: 2;
+  }
+
+  th,
+  td {
+    padding: 10px 10px;
+    text-align: left;
+    font: 400 15px $font_1;
+
+    .ri {
+      margin: 0 15px 0 0;
+      font-size: 16px;
+      color: #808080;
+
+      &:hover {
+        color: $theme_color_1;
+      }
+    }
+  }
+
+  thead th {
+    background-color: $theme_color_1;
+    color: #fff;
+    width: 3.571428571%;
+    font: 700 16px $font_1;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #e9ecef;
+  }
+}
